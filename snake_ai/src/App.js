@@ -12,11 +12,18 @@ const DIRECTIONS = {
 };
 
 function App() {
+  const getRandomFoodPosition = () => {
+    const x = Math.floor(Math.random() * (WIDTH / SNAKE_SIZE)) * SNAKE_SIZE;
+    const y = Math.floor(Math.random() * (HEIGHT / SNAKE_SIZE)) * SNAKE_SIZE;
+    return { x, y };
+  };
+
   const [snake, setSnake] = useState([{ x: WIDTH / 2, y: HEIGHT / 2 }]);
   const [direction, setDirection] = useState(DIRECTIONS[39]);
   const [food, setFood] = useState(getRandomFoodPosition());
   const [speed, setSpeed] = useState(150);
   const [isGameOver, setIsGameOver] = useState(false);
+  const [score, setScore] = useState(0); // New state for score
 
   useEffect(() => {
     const handleKeyDown = (e) => {
@@ -62,6 +69,7 @@ function App() {
     if (head.x === food.x && head.y === food.y) {
       setFood(getRandomFoodPosition());
       setSpeed(speed => Math.max(50, speed - 10)); // Speed up the game
+      setScore(score + 10); // Increment score
     } else {
       newSnake.pop();
     }
@@ -78,23 +86,19 @@ function App() {
     return false;
   };
 
-  const getRandomFoodPosition = () => {
-    const x = Math.floor(Math.random() * (WIDTH / SNAKE_SIZE)) * SNAKE_SIZE;
-    const y = Math.floor(Math.random() * (HEIGHT / SNAKE_SIZE)) * SNAKE_SIZE;
-    return { x, y };
-  };
-
   const resetGame = () => {
     setSnake([{ x: WIDTH / 2, y: HEIGHT / 2 }]);
     setDirection(DIRECTIONS[39]);
     setFood(getRandomFoodPosition());
     setSpeed(150);
     setIsGameOver(false);
+    setScore(0); // Reset score
   };
 
   return (
     <div className="game-container">
       <h1>Snake Game - Nokia Style</h1>
+      <div className="score">Score: {score}</div> {/* Display score */}
       <div className="game-area">
         {snake.map((segment, index) => (
           <div

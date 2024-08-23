@@ -20,6 +20,10 @@ body {
   background-color: #111;
   border: 1px solid #fff;
   margin: 0 auto;
+  background-image: 
+    linear-gradient(#333 1px, transparent 1px),
+    linear-gradient(90deg, #333 1px, transparent 1px);
+  background-size: 10px 10px; /* Grid size corresponds to SNAKE_SIZE */
 }
 
 .snake-segment {
@@ -34,6 +38,11 @@ body {
   width: 10px;
   height: 10px;
   background-color: #f00;
+}
+
+.score {
+  font-size: 18px;
+  margin-bottom: 10px;
 }
 
 .game-over {
