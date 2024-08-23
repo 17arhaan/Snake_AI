@@ -1,0 +1,70 @@
+.App {
+  text-align: center;
+}
+.front, .game-over {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.game {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+.score {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+.pause-button {
+  padding: 10px 20px;
+  font-size: 18px;
+  color: #fff;
+  background-color: #f39c12;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.pause-button:hover {
+  background-color: #e67e22;
+}
+.grid {
+  margin-top: 20px;
+}
+.row {
+  display: flex;
+}
+.cell {
+  width: 20px;
+  height: 20px;
+  border: 1px solid #ccc;
+  background-color: #f0f0f0;
+}
+.snake {
+  background-color: #27ae60;
+  border-radius: 50%;
+}
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.food {
+  background-color: #e74c3c;
+  border-radius: 50%;
+  animation: blink 0.5s infinite;
+}
+.snake.paused {
+  animation: blink 1s infinite;
+}
