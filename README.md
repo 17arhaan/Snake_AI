@@ -1,71 +1,122 @@
-# Created by 17Arhaan, KING-258, D1NLONELY
-### Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+---
 
-## Available Scripts
+# Snake Game Project
 
-In the project directory, you can run:
+Welcome to the Snake Game Project! This project contains two versions of the Snake game:
+1. A **JavaScript (React)** version.
+2. A **Python (Pygame)** version.
 
-### `npm start`
+Both versions are independent of each other and provide different ways to experience the classic Snake game. Below are the steps to set up and run both versions.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## JavaScript (React) Version
 
-### `npm test`
+This version of the game was built using **React**. Follow the instructions below to set it up and run.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Getting Started
 
-### `npm run build`
+1. Navigate to the `react_version` folder.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+   ```bash
+   cd react_version
+   ```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+2. Install the necessary dependencies by running:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+   ```bash
+   npm install
+   ```
 
-### `npm run eject`
+3. Start the development server:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+   ```bash
+   npm start
+   ```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+4. Open [http://localhost:3000](http://localhost:3000) in your browser to play the game.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Available Scripts
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- **npm start**: Runs the app in development mode.
+- **npm run build**: Builds the app for production.
 
-## Learn More
+For more details, check the [Create React App Documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+---
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Python (Pygame) Version
 
-### Code Splitting
+The Python version of the Snake game uses **Pygame** for the game interface. It includes an AI-based version where the snake is controlled using Q-learning.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### Getting Started
 
-### Analyzing the Bundle Size
+1. Navigate to the `python_version` folder:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+   ```bash
+   cd python_version
+   ```
 
-### Making a Progressive Web App
+2. Install the required Python dependencies by running:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-### Advanced Configuration
+3. Run the Snake game using:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+   ```bash
+   python SnakePygame.py
+   ```
 
-### Deployment
+   This will launch the Snake game in a separate window. Control the snake using the arrow keys.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+### Q-Learning AI
 
-### `npm run build` fails to minify
+The AI version of the game uses Q-learning to control the snake. The AI model is stored as a `.pickle` file. The game will load the pre-trained model and run the snake using the AI.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+To train your own model, you can implement your Q-learning code and save the Q-table in the `Q_table_results` folder.
+
+### Dependencies
+
+- **Pygame**: Required for the graphical interface.
+- **Numpy**: For managing the game's internal state and logic.
+- **Pickle**: For loading and saving AI models.
+
+---
+
+## Enhancement Details
+
+- **React Version Enhancements**:
+  - Added a live score feature.
+  - Implemented movement using both keyboard input and future AI gestures.
+  - The game automatically speeds up as you score higher.
+
+- **Python Version Enhancements**:
+  - Includes AI-based Q-learning control for the snake.
+  - Displays survival time and dynamic scoring.
+  - You can run the game manually or let the AI play using the pre-trained model.
+
+---
+
+## How to Play
+
+### React Version
+- Control the snake using the arrow keys.
+- The goal is to eat food, and each time the snake eats, it grows longer.
+- Be careful not to collide with the walls or the snake itself!
+
+### Python Version
+- Control the snake using the arrow keys in manual mode.
+- For AI mode, the snake will autonomously try to navigate the grid and eat food.
+- Avoid collisions with walls or the snake's body.
+
+---
+
+## Contributions
+
+Feel free to contribute to this project by adding more features, fixing bugs, or optimizing the AI model.
+
+---
+<img src="https://www.sify.com/wp-content/uploads/2022/09/snake_game_1200x574.gif" width="600" height="287">
