@@ -1,4 +1,3 @@
-<img src="https://www.sify.com/wp-content/uploads/2022/09/snake_game_1200x574.gif" width="600" height="287">
 ---
 
 # Snake Game Project
@@ -119,3 +118,4 @@ To train your own model, you can implement your Q-learning code and save the Q-t
 Feel free to contribute to this project by adding more features, fixing bugs, or optimizing the AI model.
 
 ---
+<img src="https://www.sify.com/wp-content/uploads/2022/09/snake_game_1200x574.gif" width="600" height="287">
