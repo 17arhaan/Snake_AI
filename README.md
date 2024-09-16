@@ -1,5 +1,3 @@
-Here's the README in copy format for your project:
-
 ---
 
 # Snake Game Project
