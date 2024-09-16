@@ -1,4 +1,4 @@
-https://www.sify.com/wp-content/uploads/2022/09/snake_game_1200x574.gif
+<img src="https://www.sify.com/wp-content/uploads/2022/09/snake_game_1200x574.gif">
 ---
 
 # Snake Game Project
